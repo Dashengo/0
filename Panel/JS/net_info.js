@@ -1,7 +1,7 @@
 /*
 [Panel]
-#机场信息
-Sub_info = script-name=Sub_info,update-interval = 43200
+#网络详情
+NET_info = script-name=NET_info,update-interval=1
 [Script]
 #網路詳情 标题显示为根节点名
 #应当修改的字段 group 代理策略组名称
