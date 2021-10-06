@@ -5,7 +5,7 @@ NET_info = script-name=NET_info,update-interval=1
 [Script]
 #網路詳情 标题显示为根节点名
 #应当修改的字段 group 代理策略组名称
-NET_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/net_info.js,argument=icon=externaldrive.connected.to.line.below&color=#9a7ff7&group=Master
+NET_info = type=generic,timeout=10,script-path=https://github.com/Quantou741/Surge/tree/master/Panel/JS/net_info.js,argument=icon=externaldrive.connected.to.line.below&color=#9a7ff7&group=Master
 */
 
 ;(async () => {
@@ -30,9 +30,9 @@ $httpClient.get('http://ip-api.com/json/?lang=en', function (error, response, da
     $done({
       title:rootName,
       content:
-		`國家地區: ${jsonData.country} - ${jsonData.city}\n`+
-      `運營商 : ${jsonData.isp}\n` +
-		`數據中心: ${jsonData.org}`,
+		`地区: ${jsonData.country} - ${jsonData.city}\n`+
+      `运营商 : ${jsonData.isp}\n` +
+		`数据中心: ${jsonData.org}`,
       icon: params.icon,
 		  "icon-color":params.color
     });
