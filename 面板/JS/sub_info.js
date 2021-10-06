@@ -5,7 +5,7 @@ Surge配置参考注释，感谢@asukanana,感谢@congcong.
 ----------------------------------------
 
 [Script]
-Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=1&title=AmyInfo&icon=bonjour&color=#007aff
+Sub_info = type=generic,timeout=10,script-path=https://github.com/Quantou741/Surge/edit/master/Panel/JS/sub_info.js,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=1&title=AmyInfo&icon=bonjour&color=#007aff
 
 [Panel]
 Sub_info = script-name=Sub_info,update-interval=600
@@ -39,10 +39,6 @@ Sub_info = script-name=Sub_info,update-interval=600
 
   if (resetDayLeft) {
     content.push(`重置：剩余${resetDayLeft}天`);
-  }
-  if (expire) {
-    if (/^[\d]+$/.test(expire)) expire *= 1000;
-    content.push(`到期：${formatTime(expire)}`);
   }
 
   let now = new Date();
@@ -133,12 +129,4 @@ function bytesToSize(bytes) {
   sizes = ["B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
   let i = Math.floor(Math.log(bytes) / Math.log(k));
   return (bytes / Math.pow(k, i)).toFixed(2) + " " + sizes[i];
-}
-
-function formatTime(time) {
-  let dateObj = new Date(time);
-  let year = dateObj.getFullYear();
-  let month = dateObj.getMonth() + 1;
-  let day = dateObj.getDate();
-  return year + "年" + month + "月" + day + "日";
 }
