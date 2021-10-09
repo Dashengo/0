@@ -1,3 +1,10 @@
+#
+DOMAIN,m.mypianku.net // 片库
+DOMAIN,ts8.hhmm0.com // 片库视频
+DOMAIN,ddrk.me // 低端影视
+DOMAIN,alixiaozhan.xyz // 阿里云小站
+DOMAIN,www.nfmovies.com // 奈菲影视
+
 # Unbreak
 # > General
 USER-AGENT,archero*
