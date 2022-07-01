@@ -1,0 +1,16 @@
+#!name=TikTok
+#!desc=▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+#!system=ios
+
+[URL Rewrite]
+(?<=_region=)CN(?=&) US 307
+(^h.+v5\/)(.+) $1 302
+(?<=&mcc_mnc=)4 2 307
+#TikTok去水印
+(?<=eme\/v)2(?=\/f\w{2}d\/\?.*) 1 302
+
+[Script]
+TikTok去水印 = script-path=Js/TikTok.js,requires-body=1,timeout=10,tag=TikTok去水印,type=http-response,pattern=https?:\/\/.*\.tiktokv\.com\/aweme\/v\d\/(feed|mix\/aweme|aweme\/post|(multi\/)?aweme\/detail|follow\/feed|nearby\/feed|search\/item|general\/search\/single|hot\/search\/video\/list|aweme\/favorite),max-size=0
+
+[MITM]
+hostname = %APPEND% *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
