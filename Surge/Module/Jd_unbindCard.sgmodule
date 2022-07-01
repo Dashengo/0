@@ -1,0 +1,12 @@
+#!name=京东销卡
+#!desc=
+#!system=ios
+
+// 会员卡跳转验证 2021-06-03 15:34:30
+// https://raw.githubusercontent.com/githubdulong/Script/master/Jd_unbindCard.sgmodule
+
+[URL Rewrite]
+^(https://shopmember.m.jd.com/)(shopcard/\?)(venderId=[0-9]+).* $1member/memberCloseAccount?$3 302
+
+[MITM]
+hostname =  %APPEND% shopmember.m.jd.com
