@@ -1,0 +1,9 @@
+#!name=隐藏VPN
+#!desc=▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+#!system=ios
+
+#隐藏状态栏上的 VPN 图标，可能会导致「Cannot allocate memory」系统错误，请谨慎使用
+
+[General]
+hide-vpn-icon=true
+
