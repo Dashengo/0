@@ -1,0 +1,8 @@
+#!name=DOH
+#!desc=▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+
+[General]
+#阿里
+doh-server = https://dns.alidns.com/dns-query
+#腾讯
+doh-server = https://doh.pub/dns-query
